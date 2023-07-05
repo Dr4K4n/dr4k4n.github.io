@@ -1,10 +1,14 @@
 # Installing Firefox via APT instead of snap on Ubuntu 22.04
 
-1. remove firefox snap
+> WARNING! You may want to do a backup of your firefox profile (see below)
+
+## remove firefox snap
 ```sh
 snap remove firefox
 ```
-2. Add the ["Mozilla Team" PPA](https://launchpad.net/~mozillateam/+archive/ubuntu/ppa)
+
+## Install firefox via API
+1. Add the ["Mozilla Team" PPA](https://launchpad.net/~mozillateam/+archive/ubuntu/ppa)
 ```sh
 sudo add-apt-repository ppa:mozillateam/ppa
 sudo apt update
@@ -47,3 +51,9 @@ sudo apt install firefox
 ```
 
 5. Profit!!!
+
+## Profile Backup
+
+Snap Firefox profiles are saved in `~/snap/firefox/common/.mozilla/`
+I've copied this over to `~/.mozilla/`. 
+Sadly firefox wasn't picking up my old profile on first start, I needed to modify the `Default` in `~/.mozilla/firefox/profiles.ini`.
