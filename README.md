@@ -7,13 +7,13 @@
 snap remove firefox
 ```
 
-## Install firefox via API
+## Install firefox via APT
 1. Add the ["Mozilla Team" PPA](https://launchpad.net/~mozillateam/+archive/ubuntu/ppa)
 ```sh
 sudo add-apt-repository ppa:mozillateam/ppa
 sudo apt update
 ```
-3. Prevent ubuntu from installing firefox via snap when you try to install it via API by pinning the snap version. Read more about pinning [here](https://help.ubuntu.com/community/PinningHowto).
+3. Prevent ubuntu from installing firefox via snap when you try to install it via APT by pinning the snap version. Read more about pinning [here](https://help.ubuntu.com/community/PinningHowto).
 
 ```sh
 nano /etc/apt/preferences.d/firefox
